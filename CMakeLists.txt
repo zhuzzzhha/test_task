@@ -1,7 +1,5 @@
-cmake_minimum_required(VERSION 3.20)
-
-project(zhukova-a-v)
-
+cmake_minimum_required(VERSION 3.0)
+project(GeometricShapes)
 
 set(VCPKG_ROOT "Вставьте путь до vcpkg")
 set(VCPKG_INSTALLED_DIR "${VCPKG_ROOT}/installed")
@@ -23,6 +21,18 @@ set(TIFF_LIBRARY "${VCPKG_ROOT}/installed/x64-windows/lib/tiff")
 
 find_package(OpenCV CONFIG REQUIRED)
 
-add_subdirectory(src)
+# Создание цели библиотеки
+add_library(geometry_shapes STATIC
+    src/triangle.cpp
+    src/circle.cpp
+    src/rectangle.cpp
+    src/shape.cpp
 
-#set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_BINARY_DIR}/install)
+)
+
+# Указание пути для заголовочных файлов
+target_include_directories(geometry_shapes PUBLIC include opencv_core opencv_imgproc opencv_highgui)
+
+add_subdirectory(tests)
+
+
