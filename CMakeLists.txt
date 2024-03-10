@@ -34,5 +34,5 @@ add_library(geometry_shapes STATIC
 target_include_directories(geometry_shapes PUBLIC include opencv_core opencv_imgproc opencv_highgui)
 
 add_subdirectory(tests)
-
+install(TARGETS test DESTINATION .)
 
