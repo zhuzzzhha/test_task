@@ -6,7 +6,7 @@ class Circle: public MyShape
 {
 public:
 	Circle() = default;
-	Circle(cv::Point centre, double radius, cv::Scalar c = cv::Scalar(0, 0, 255), int t = 2);
+	Circle(cv::Point centre, double radius, cv::Scalar c = cv::Scalar(0, 0, 255), unsigned int t = 2);
 
 	Circle(const Circle&) = default;
 

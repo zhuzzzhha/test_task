@@ -1,23 +1,16 @@
-
-#include <opencv2/opencv.hpp>
 #pragma once
+#include <opencv2/opencv.hpp>
+
 
 class MyShape
 {
 public:
-	MyShape(cv::Scalar color, int thickness) : color_{ color }, thickness_{ thickness }
-	{}
+	MyShape(cv::Scalar color, unsigned int thickness);
 	virtual void Draw(cv::Mat& image) const = 0;
-	void SetColor(cv::Scalar color)
-	{
-		color_ = color;
-	}
+	void SetColor(cv::Scalar color);
 
-	void SetThickness(int thickness)
-	{
-		thickness_ = thickness;
-	}
+	void SetThickness(unsigned int thickness);
 	
 	cv::Scalar color_{ 0, 0, 0 };
-	int thickness_{ -1 };
+	unsigned int thickness_{ 1 };
 };

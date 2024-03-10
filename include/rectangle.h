@@ -4,7 +4,7 @@
 
 class Rectangle:public MyShape {
 public:
-    Rectangle(cv::Point top_left, cv::Point bottom_right, cv::Scalar c = cv::Scalar(0, 0, 255), int t = 2);
+    Rectangle(cv::Point top_left, cv::Point bottom_right, cv::Scalar color = cv::Scalar(0, 0, 255), unsigned int thickness = 2);
 
     ~Rectangle() = default;
 
@@ -26,9 +26,9 @@ protected:
 
 class Square : public Rectangle {
 public:
-    Square(cv::Point top_left, int side_length, cv::Scalar c = cv::Scalar(0, 0, 255), int t = 2);
+    Square(cv::Point top_left, double side_length, cv::Scalar color = cv::Scalar(0, 0, 255), unsigned int thickness = 2);
 	~Square() = default;
 
 private:
-	int side_length{10};
+	double side_length{ 10 };
 };

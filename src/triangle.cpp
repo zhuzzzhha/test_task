@@ -2,7 +2,7 @@
 #include <opencv2/opencv.hpp>
 
 //////////////////////////////////////////////////////////
-Triangle::Triangle(cv::Point point_1, cv::Point point_2, cv::Point point_3, cv::Scalar color, int thickness) :
+Triangle::Triangle(cv::Point point_1, cv::Point point_2, cv::Point point_3, cv::Scalar color, unsigned int thickness) :
 	point_1_(point_1), point_2_(point_2), point_3_(point_3), MyShape(color, thickness) {
 	// Проверяем условие на формирование треугольника
 	if (!isTriangle()) {
@@ -18,7 +18,7 @@ void Triangle::Draw(cv::Mat& image) const
 	cv::line(image, point_3_, point_1_, color_, thickness_);
 	};
 //////////////////////////////////////////////////////////
-Triangle::Triangle(cv::Point startPoint, double side_1, double side_2, double side_3, cv::Scalar color, int thickness):
+Triangle::Triangle(cv::Point startPoint, double side_1, double side_2, double side_3, cv::Scalar color, unsigned int thickness):
 	point_1_(startPoint), MyShape(color, thickness){
 
 	point_1_ = startPoint;

@@ -6,8 +6,8 @@ class Triangle: public MyShape
 {
 public:
 	Triangle() = default;
-	Triangle(cv::Point p1, cv::Point p2, cv::Point p3, cv::Scalar c = cv::Scalar(0, 0, 255), int t = 2);
-	Triangle(cv::Point startPoint, double side_1, double side_2, double side_3, cv::Scalar color = cv::Scalar(0, 0, 255), int thickness = 2);
+	Triangle(cv::Point p1, cv::Point p2, cv::Point p3, cv::Scalar color = cv::Scalar(0, 0, 255), unsigned int thickness = 2);
+	Triangle(cv::Point startPoint, double side_1, double side_2, double side_3, cv::Scalar color = cv::Scalar(0, 0, 255), unsigned int thickness = 2);
 
 	Triangle(const Triangle&) = default;
 
