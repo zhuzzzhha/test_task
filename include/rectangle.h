@@ -27,6 +27,7 @@ protected:
 class Square : public Rectangle {
 public:
     Square(cv::Point top_left, int side_length, cv::Scalar c = cv::Scalar(0, 0, 255), int t = 2);
+	~Square() = default;
 
 private:
 	int side_length{10};
